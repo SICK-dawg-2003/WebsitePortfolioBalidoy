@@ -343,13 +343,13 @@ h3.my-profession {
   max-width: 40%;
   text-align: center;
   position: relative;
-  width: 100%;
+  max-width: 100%;
   /* Make the image fill the width of the box */
-  height: 100%;
+  height: auto;
   /* Ensure the image fills the height */
   object-fit: cover;
   /* Crop the image to fit the box */
-  border-radius: 10px;
+  border-radius: 90px;
   /* Match the parent's border-radius */
 }
 
@@ -557,6 +557,7 @@ h3.my-profession {
   justify-content: center;
   margin-top: 100px;
   margin-left: 330px;
+  height: 90%;
 }
 
 /* Timeline Box */
@@ -564,6 +565,12 @@ h3.my-profession {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  /* Stack timeline items vertically */
+  gap: 20px;
+  /* Space between timeline items */
+
 }
 
 /* Title Styles */
@@ -575,15 +582,17 @@ h3.my-profession {
   margin-bottom: 2rem;
 }
 
+
 /* Timeline Styles */
 .timeline {
   background-color: var(--bg-black-100);
   padding: 30px;
   border: 1px solid var(--bg-black-50);
-  border-radius: 10px;
+  border-radius: 30px;
   font-size: 16px;
   font-weight: 400;
   position: relative;
+
 }
 
 /* Timeline Item */
@@ -898,84 +907,68 @@ h3.my-profession {
   padding: 0 50px;
 }
 
-.btn-message {
-  display: inline-block;
-  margin-top: 15px;
+
+/* Style for the Social Buttons Container */
+.social-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  /* Adds space between buttons */
+  margin-top: 30px;
+}
+
+/* Style for the Social Buttons */
+.btn-social {
+  display: inline-flex;
+  align-items: center;
   padding: 10px 20px;
   background-color: #848484;
   color: #000000;
   font-size: 16px;
   font-weight: 600;
-  text-align: center;
   border-radius: 5px;
   text-decoration: none;
   transition: background-color 0.3s ease;
-
 }
 
-.btn-message:hover {
+.btn-social i {
+  margin-right: 10px;
+  /* Adds space between icon and text */
+}
+
+.btn-social:hover {
   background-color: var(--skin-color);
+  /* Replace with your hover color */
 }
 
-@media (max-width:1199px) {
 
-  .aside {
-    left: -270px
+@media (max-width: 1720px) {
+
+  .home-info {
+    text-align: left;
   }
 
-  .main-content {
-    padding-left: 0;
+  .home-img img {}
+
+  .home-img::after {
+    content: '';
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    border-top: 10px solid var(--skin-color4);
+    border-right: 10px solid var(--skin-color);
+    right: 90px;
+    top: 70px;
   }
-}
 
-.about .about-content .personal-info .info-item p span {}
-
-@media (max-width:767px) {
   .education-experience-container {
-    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 100px;
+    margin-left: 0px;
+    height: 90%;
   }
 
-  .timeline {
-    padding: 20px;
-  }
-
-  .timeline-title {
-    font-size: 16px;
-  }
-
-  .timeline-text {
-    font-size: 14px;
-    line-height: 22px;
-  }
-}
-
-@media (max-width:993px) {
-  .section {
-    padding: 0px 150px;
-
-  }
-
-  .service {
-    padding: 50px 100px;
-  }
-
-}
-
-@media (max-width:330px) {
-  .aside {
-    left: -270px;
-  }
-
-  .section {
-    padding: 0px 550px;
-
-
-  }
-
-  .about .about-content .personal-info .info-item p span {}
-
-  .service {
-    padding: 50px 100px;
-  }
 
 }
