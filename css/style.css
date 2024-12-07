@@ -25,7 +25,14 @@ body {
   line-height: 1.5;
   font-size: 16px;
   font-family: 'Poppins', sans-serif;
+  margin: 0;
 
+  display: flex;
+
+  /* Horizontal centering */
+  align-items: center;
+  /* Vertical centering */
+  background-color: var(--bg-black-900);
 
 
 }
@@ -347,23 +354,23 @@ h3.my-profession {
 }
 
 
-.home-img::before {
+.home-img::after {
   content: '';
   position: absolute;
   height: 80px;
   width: 80px;
   border-top: 10px solid var(--skin-color4);
-  border-left: 10px solid var(--skin-color);
-  left: 20px;
+  border-right: 10px solid var(--skin-color);
+  right: 150px;
   top: 70px;
 }
 
 .home .home-img img {
   margin: auto;
   border-radius: 50px;
-  height: 500px;
-  width: 400px;
-  margin-right: 300px;
+  height: 300px;
+  width: 250px;
+  margin-right: 100px;
   margin-top: 100px;
 
 }
@@ -549,6 +556,7 @@ h3.my-profession {
   gap: 2rem;
   justify-content: center;
   margin-top: 100px;
+  margin-left: 330px;
 }
 
 /* Timeline Box */
@@ -781,7 +789,7 @@ h3.my-profession {
 }
 
 .btn-download:hover {
-  background-color: var(--skin-color2);
+  background-color: var(--skin-color);
 }
 
 /*contact Me*/
@@ -888,6 +896,25 @@ h3.my-profession {
 .contact .contact-form .btn {
   height: 50px;
   padding: 0 50px;
+}
+
+.btn-message {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #848484;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+
+}
+
+.btn-message:hover {
+  background-color: var(--skin-color);
 }
 
 @media (max-width:1199px) {
